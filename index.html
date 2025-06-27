@@ -2,162 +2,169 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Angela Kwiecinski - Corretora de Imóveis</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #fdfdfd;
-      color: #333;
-    }
-    header {
       background-color: #fff;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 3px solid #FFC107;
-    }
-    header img {
-      width: 180px;
-      margin-bottom: 10px;
-    }
-    header h1 {
-      color: #FFC107;
       margin: 0;
-      font-size: 28px;
+      padding: 0;
     }
-    header p {
-      font-size: 15px;
-      color: #555;
-      margin: 4px 0;
-    }
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
-    }
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .info {
+
+    header {
+      text-align: center;
       padding: 20px;
     }
-    .info h2 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      color: #222;
+
+    .logo {
+      width: 180px;
     }
-    .info p {
-      margin: 5px 0;
-      font-size: 15px;
+
+    h1 {
+      color: #f9b000;
     }
-    .preco {
-      font-weight: bold;
-      color: #FFC107;
-      margin-top: 10px;
+
+    .imovel {
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
-    .btn {
+
+    .imovel img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .botao {
       display: inline-block;
       margin-top: 15px;
-      padding: 10px 18px;
-      background: #FFC107;
+      padding: 10px 20px;
+      background-color: #f9b000;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
+      border-radius: 6px;
+      font-weight: bold;
     }
+
     footer {
-      margin-top: 50px;
-      background: #fff;
-      border-top: 2px solid #eee;
       text-align: center;
+      margin-top: 40px;
       padding: 20px;
       font-size: 14px;
       color: #555;
+      border-top: 1px solid #eee;
     }
-    .social {
-      margin-top: 10px;
+
+    /* Chatbot */
+    .chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      text-align: right;
     }
-    .social a {
-      color: #555;
-      margin: 0 8px;
-      text-decoration: none;
+
+    .chatbox {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 250px;
+      display: none;
+    }
+
+    .chatbox p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .chatbox button {
+      background-color: #f9b000;
+      color: white;
+      border: none;
+      margin-top: 8px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    .chat-icon {
+      width: 50px;
+      height: 50px;
+      background-color: #f9b000;
+      color: white;
+      font-size: 24px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <img src="logo-angela.jpg" alt="Logo Angela Kwiecinski">
-  <div>
+  <header>
+    <img src="logo-angelaj.jpg" alt="Logo da Ângela" class="logo" />
     <h1>Angela Kwiecinski</h1>
-    <p>Corretora de Imóveis - CRECI MT 13163</p>
-    <p>Atendimento em Cuiabá e Várzea Grande - MT</p>
+    <p>Corretora de Imóveis - CRECI MT 13163<br />
+      Atendimento em Cuiabá e Várzea Grande - MT</p>
+  </header>
+
+  <!-- Imóveis -->
+  <div id="casa1" class="imovel">
+    <img src="casa1.jpg" alt="Imagem Casa 1" />
+    <h3>Casa 1 - Jardim das Américas</h3>
+    <p>3 quartos, suíte, quintal, garagem</p>
+    <a href="https://wa.me/5565999647320?text=Tenho%20interesse%20na%20Casa%201" target="_blank" class="botao">Falar com Ângela</a>
   </div>
-</header>
 
-<div class="container" id="imoveis-container"></div>
-
-<footer>
-  <p>© 2025 Angela Kwiecinski - Corretora de Imóveis Autônoma</p>
-  <p>📞 (65) 99964-7320 | ✉️ angelakcorretora@gmail.com</p>
-  <div class="social">
-    Instagram: <a href="https://instagram.com/angelakcorretora" target="_blank">@angelakcorretora</a>
+  <div id="casa2" class="imovel">
+    <img src="casa2.jpg" alt="Imagem Casa 2" />
+    <h3>Casa 2 - Bairro Morada do Ouro</h3>
+    <p>2 quartos, cozinha planejada, área gourmet</p>
+    <a href="https://wa.me/5565999647320?text=Tenho%20interesse%20na%20Casa%202" target="_blank" class="botao">Falar com Ângela</a>
   </div>
-</footer>
 
-<script>
-const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4ioR3cdXmkK_WKF07tFneMpEN0nNuUrg_aNiYog_7qdB66TOxLCGmId5LsmiA5kdaGpWycr3v1H4Z/pub?output=csv";
+  <footer>
+    © 2025 Angela Kwiecinski - Corretora de Imóveis Autônoma<br />
+    📞 (65) 99964-7320 | ✉️ angelakcorretora@gmail.com<br />
+    Instagram: @angelakcorretora
+  </footer>
 
-fetch(sheetURL)
-  .then(response => response.text())
-  .then(data => {
-    const lines = data.split('\n').slice(1); // ignora cabeçalho
-    const container = document.getElementById("imoveis-container");
-    lines.forEach(line => {
-      const [titulo, descricao, preco, imagem, link] = line.split(',');
-      if (titulo && imagem) {
-        const card = document.createElement("div");
-        card.className = "card";
-        card.innerHTML = `
-          <img src="${imagem}" alt="Imagem do imóvel">
-          <div class="info">
-            <h2>${titulo}</h2>
-            <p>${descricao}</p>
-            <p class="preco">${preco}</p>
-            <a class="btn" href="${link}" target="_blank">Falar com Angela</a>
-          </div>
-        `;
-        container.appendChild(card);
-      }
-    });
-  });
-</script>
+  <!-- Chat Bot -->
+  <div class="chatbot">
+    <div class="chatbox" id="chatBox">
+      <p>👋 Olá! Escolha uma casa para saber mais:</p>
+      <button onclick="irParaImovel('casa1')">🏠 Casa 1</button>
+      <button onclick="irParaImovel('casa2')">🏡 Casa 2</button>
+      <button onclick="falarComAngela()">💬 Falar com Ângela</button>
+    </div>
+    <button class="chat-icon" onclick="toggleChat()">💬</button>
+  </div>
 
-<!-- Chat Tawk.to -->
-<script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/685b3caee9a67e1918b14020/1iui6a2qv';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-  })();
-</script>
-<!-- Fim do Chat -->
+  <script>
+    function toggleChat() {
+      const chat = document.getElementById("chatBox");
+      chat.style.display = chat.style.display === "block" ? "none" : "block";
+    }
+
+    function irParaImovel(id) {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+
+    function falarComAngela() {
+      window.open("https://wa.me/5565999647320", "_blank");
+    }
+  </script>
 
 </body>
 </html>
