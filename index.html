@@ -19,6 +19,16 @@
 
     .logo {
       width: 180px;
+      height: auto;
+      max-width: 90%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .logo {
+        width: 300px;
+      }
     }
 
     h1 {
@@ -113,7 +123,7 @@
 <body>
 
   <header>
-    <img src="logo-angela.jpg" alt="Logo da Ângela" class="logo" />
+    <img src="logo-angela.jpg" alt="Logo da Angela" class="logo" />
     <h1>Angela Kwiecinski</h1>
     <p>Corretora de Imóveis - CRECI MT 13163<br />
       Atendimento em Cuiabá e Várzea Grande - MT</p>
@@ -124,16 +134,16 @@
     <img src="casa1.jpg" alt="Imagem Casa 1" />
     <h3>Casa no Condomínio Origem do Sol</h3>
     <p>É um empreendimento da RNI PRONTO PRA MORAR no bairro planejado do Chapéu do Sol em Várzea Grande/ MT.
-       São casas de 2 ou 3 quartos, sendo 1 suite, em um condomínio fechado, com completa infrastrutura de lazer.
-       Facilidade na forma de pagamento! Sinal super baixo !</p>
-    <a href="https://wa.me/5565999647320?text=Tenho%20interesse%20na%20Casa%201" target="_blank" class="botao">Falar com Ângela</a>
+       São casas de 2 ou 3 quartos, sendo 1 suíte, em um condomínio fechado, com completa infraestrutura de lazer.
+       Facilidade na forma de pagamento! Sinal super baixo!</p>
+    <a href="https://wa.me/5565999647320?text=Tenho%20interesse%20na%20Casa%201" target="_blank" class="botao">Falar com Angela</a>
   </div>
 
   <div id="casa2" class="imovel">
     <img src="casa2.jpg" alt="Imagem Casa 2" />
-    <h3>Edifíco American Diamond Jardim das Américas</h3>
-    <p>182M2, Sol da manhã, Andar alto, Mobiliado e climatizado. 4 suítes completas, Lavabo, Sala para dois ambientes com cortinas e varanda gourmet com cortina de vidro, cozinha completa. Área de serviço e dispensa. 3 vagas de garagem. Lazer completo; piscina, academia, playground, portaria 24 horas, salão de festa, quadra, salão de jogos.</p>
-    <a href="https://wa.me/5565999647320?text=Tenho%20interesse%20na%20Casa%202" target="_blank" class="botao">Falar com Ângela</a>
+    <h3>Edifício American Diamond Jardim das Américas</h3>
+    <p>182m², Sol da manhã, Andar alto, Mobiliado e climatizado. 4 suítes completas, Lavabo, Sala para dois ambientes com cortinas e varanda gourmet com cortina de vidro, cozinha completa. Área de serviço e despensa. 3 vagas de garagem. Lazer completo: piscina, academia, playground, portaria 24h, salão de festas, quadra, salão de jogos.</p>
+    <a href="https://wa.me/5565999647320?text=Tenho%20interesse%20na%20Casa%202" target="_blank" class="botao">Falar com Angela</a>
   </div>
 
   <footer>
@@ -147,7 +157,7 @@
     <div class="chatbox" id="chatBox">
       <p>👋 Olá! Escolha uma casa para saber mais:</p>
       <button onclick="irParaImovel('casa1')">🏠 Casa Condomínio Origem do Sol</button>
-      <button onclick="irParaImovel('casa2')">🏡 Edifíco American Diamond jardim das Américas</button>
+      <button onclick="irParaImovel('casa2')">🏡 Edifício American Diamond</button>
       <button onclick="falarComAngela()">💬 Falar com Ângela</button>
     </div>
     <button class="chat-icon" onclick="toggleChat()">💬</button>
